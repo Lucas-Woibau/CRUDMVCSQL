@@ -13,7 +13,7 @@ namespace CRUDMVCSQL
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddDbContext<Contexto>
-                (options => options.UseSqlServer(""));
+                (options => options.UseSqlServer("Data Source=LUCAS\\SQLSERVER;Initial Catalog=CRUD_MVC_SQL;Integrated Security=True;"));
 
             var app = builder.Build();
 
