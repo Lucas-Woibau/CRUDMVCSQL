@@ -1,3 +1,6 @@
+using CRUDMVCSQL.Models;
+using Microsoft.EntityFrameworkCore;
+
 namespace CRUDMVCSQL
 {
     public class Program
@@ -8,6 +11,9 @@ namespace CRUDMVCSQL
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<Contexto>
+                (options => options.UseSqlServer(""));
 
             var app = builder.Build();
 
